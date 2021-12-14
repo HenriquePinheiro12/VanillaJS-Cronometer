@@ -22,7 +22,7 @@ const resetBtn = document.querySelector('.reset');
 // do a func for each of them 
 
 const pad = (n) =>{
-    // represents numbers under 10 w an aditional 0
+    // represents numbers under 10 with an aditional 0
     // ex: 05
     return n < 10 ? '0'+n : n;
 }

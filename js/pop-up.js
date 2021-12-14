@@ -13,5 +13,40 @@
 // funcs: open-pop-up, close-pop-up
 // add those functions on eventListeners
 
-const openPopUpBtn = document.querySelectorAll('[data-open-target]')
-console.log(openPopUpBtn)
+const openPopUpBtn = document.querySelectorAll('[data-open-target]');
+const closePopUpBtn = document.querySelectorAll('[data-close-target]');
+const overlay = document.querySelector('.overlay');
+
+const openPopUp = (target) => {
+    target.classList.add('active')
+    overlay.classList.add('active')    
+}
+
+const closePopUp = (target) => {
+    overlay.classList.remove('active')
+    target.classList.remove('active')
+}
+
+
+openPopUpBtn.forEach(btn => {
+    // Made a query to find a string returned by an onject property
+    // I thought about using:
+    // target = btn.dataset.openTarget
+    // this would assign a string to the variable. But I want to be the string as the selector to the querySelector argument and find the target element
+    btn.addEventListener('click', () =>{
+        var target = document.querySelector(btn.dataset.openTarget)
+        openPopUp(target)
+    })
+})
+
+closePopUpBtn.forEach(btn => {
+    btn.addEventListener('click', () =>{
+        var target = btn.closest('.pop-up');
+        closePopUp(target)
+    })
+})
+
+overlay.addEventListener('click', ()=>{
+    target = document.querySelector('.pop-up.active');
+    closePopUp(target);
+})
