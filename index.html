@@ -11,9 +11,13 @@
 </head>
 <body>
     <i class="open-about" data-open-target="#about" data-feather="help-circle"></i>
+    <!-- this data att wil be used to specify wich pop is the target. Usefull for pages w/ more than one pop-up-->
     <div class="overlay"></div>     
     <div class="pop-up" id="about">
-        <i data-feather="x-circle" data-close-target="#about" class="close-about"></i>
+        <i data-feather="x-circle" data-close-target class="close-about"></i>
+        <!-- Will will not specify the target here for the closest js func aproach here. But this att is for quering
+            all close buttons
+        -->
         <h2>About the project</h2>
         <p><span><strong>Cronometer developed with Vanilla JavaScript</strong></span>, using concepts learned in about 1 month with the leanguge.
         This was my first project completely done by myself and this pop-up message includes part of my learning.</p>
