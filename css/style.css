@@ -30,6 +30,7 @@ body{
 .cron-box{
     font-size: 2rem;
     display: flex;
+    text-align: center;
 }
 
 nav{
