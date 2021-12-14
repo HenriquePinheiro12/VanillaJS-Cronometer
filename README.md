@@ -4,7 +4,7 @@
 This is a project I´ve made to practice my JS and logic skills. It focuses on manipulating DOM elements and working with functions. A good part of my learning on this project was this about pop-up message I´ve included
 Hope to improve anything when I find it possible!
 
-[- Visit host!]()
+[- Visit host!](https://henriquepinheiro12.github.io/VanillaJS-Cronometer/)
 
 ## Screenshots📷
 ![](assets/zero-print.png)
