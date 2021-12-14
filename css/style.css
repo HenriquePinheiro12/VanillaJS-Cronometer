@@ -56,3 +56,8 @@ button{
     display: none;
 }
 
+@media(max-width:300px){
+    .container h1{
+        font-size: 2rem;
+    }
+}
