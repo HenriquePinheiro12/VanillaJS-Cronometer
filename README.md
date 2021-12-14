@@ -1,5 +1,4 @@
 # Vanilla JavaScript Cronometer⏰
-***
 
 ## About the project💻 
 This is a project I´ve made to practice my JS and logic skills. It focuses on manipulating DOM elements and working with functions. A good part of my learning on this project was this about pop-up message I´ve included
