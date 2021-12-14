@@ -34,10 +34,9 @@ const showHideBtns = () =>{
     } else {
         stopBtn.classList.remove('hidden');
         startBtn.classList.add('hidden');
-        // resetBtn.classList.remove('hidden');        
     }
 
-    if(mil == sec == min == hour == 0){
+    if(mil == sec == min == 0){
         resetBtn.classList.add('hidden')
     } else{
         resetBtn.classList.remove('hidden');
@@ -77,8 +76,8 @@ const updateCron = () =>{
 
 const start = () =>{  
     intervalOn = true;
-    showHideBtns();
     updateCron();
+    setTimeout(showHideBtns, 101)
     intervalId = setInterval(()=>{
         updateCron();
         count();
@@ -104,4 +103,4 @@ const reset = ()=>{
 showHideBtns();
 startBtn.addEventListener('click', start);
 stopBtn.addEventListener('click', stopCron);
-resetBtn.addEventListener('click', reset)
+resetBtn.addEventListener('click', reset);
