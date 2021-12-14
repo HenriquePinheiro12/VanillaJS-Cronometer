@@ -1,0 +1,91 @@
+/*
+  pattern to hidde something
+
+  opacity:0
+  pointer-events:none
+
+*/
+a{
+    text-decoration: none;
+    color: initial;
+    opacity: 0.8;
+}
+
+a:hover{
+    opacity: 1;
+}
+
+.open-about, .close-about{
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    color: rgb(85,26,139);
+    cursor: pointer;
+}   
+
+/*----------------------------------------------------------*/
+/*These styles go for every pop-up in a page with more than one*/
+
+.overlay{
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    background-color: rgba(0,0,0,0.3);
+    opacity: 0;
+    pointer-events: none;
+    transition: 0.5s;
+    z-index: 9;
+}
+
+.pop-up{
+    position:fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    opacity: 0;
+    pointer-events: none;
+    z-index: 10;
+    transition: 0.5s;
+}
+/*--------------------------------------------------------*/
+
+
+#about{
+    background-color: #fafafa;
+    width: 800px;
+    max-width: 90%;
+    padding: 2rem 3rem;
+    border-radius: 5px;
+}
+
+#about h2{
+    margin: 1rem;
+}
+
+#about nav{
+    margin-left: 3rem;
+}
+
+#about nav a{
+    display: flex;
+    align-items: flex-end;
+    margin: 0.5rem 0;
+}
+
+#about nav svg{
+    margin-right: 0.5rem;
+}
+
+#github-project-link{margin-top: 1rem;}
+
+#about h2, #about span, #about svg{
+    color: rgb(85,26,139);
+}
+
+.active{
+    opacity: 1;
+    pointer-events: all;
+}
+
