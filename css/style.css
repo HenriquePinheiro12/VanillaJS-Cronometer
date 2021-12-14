@@ -15,7 +15,6 @@ body{
     background: #F2F4F7;
 }
 
-
 .container{
     text-align: center;
     width: 500px;
@@ -33,7 +32,8 @@ body{
     text-align: center;
 }
 
-nav{
+/* come back here in case of bugs */
+.container nav{
     display: flex;
     justify-content: center;
     width: 60%;

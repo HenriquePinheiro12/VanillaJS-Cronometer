@@ -1,13 +1,33 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <script src="https://cdn.jsdelivr.net/npm/feather-icons/dist/feather.min.js"></script>
     <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/pop-up.css">
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Cronômetro em JavaScript</title>
 </head>
 <body>
+    <i class="open-about" data-open-target="#about" data-feather="help-circle"></i>
+    <div class="overlay"></div>     
+    <div class="pop-up" id="about">
+        <i data-feather="x-circle" data-close-target="#about" class="close-about"></i>
+        <h2>About the project</h2>
+        <p><span><strong>Cronometer developed with Vanilla JavaScript</strong></span>, using concepts learned in about 1 month with the leanguge.
+        This was my first project completely done by myself and this pop-up message includes part of my learning.</p>
+        <nav id="github-project-link">
+            <a target="_blank" href="#">Visit it on Github!</a>
+        </nav>
+        <h2>Follow me</h2>
+        <nav>
+            <p><a target="_blank" href="https://github.com/henriquepinheiro12"><i data-feather="github"></i>HenriquePinheiro12</a></p>
+            <p><a target="_blank" href="https://www.linkedin.com/in/henrique-pinheiro-a43b62203/"><i data-feather="linkedin"></i>Henrique Pinheiro</a></p>
+        </nav>
+    </div>
+
+
     <div class="container">
         <h1>Cronômetro</h1>
         <nav class="cron-box">
@@ -22,6 +42,8 @@
             <button class="hidden reset">Reset</button>
         </nav>
     </div>
-    <script src="js/index.js"></script>
+    <script>feather.replace()</script>
+    <script src="js/cronometer.js"></script>
+    <script src="js/pop-up.js"></script>
 </body>
 </html>
