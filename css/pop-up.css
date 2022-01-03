@@ -28,15 +28,13 @@ a:hover{
 
 .overlay{
     position: absolute;
-    top: 0;
-    left: 0;
-    bottom: 0;
-    right: 0;
+    inset: 0;
     background-color: rgba(0,0,0,0.3);
     opacity: 0;
     pointer-events: none;
     transition: 0.5s opacity ease-in-out;
     z-index: 9;
+    min-height: 100vh;
 }
 
 .pop-up{
@@ -48,6 +46,11 @@ a:hover{
     pointer-events: none;
     z-index: 10;
     transition: 0.5s opacity ease-in-out;
+}
+
+.active{
+    opacity: 1;
+    pointer-events: all;
 }
 /*--------------------------------------------------------*/
 
@@ -82,10 +85,5 @@ a:hover{
 
 #about h2, #about span, #about svg{
     color: rgb(85,26,139);
-}
-
-.active{
-    opacity: 1;
-    pointer-events: all;
 }
 
