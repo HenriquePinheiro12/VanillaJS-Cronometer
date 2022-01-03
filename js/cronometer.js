@@ -21,11 +21,14 @@ const stopBtn = document.querySelector('.stop');
 const resetBtn = document.querySelector('.reset');
 // do a func for each of them 
 
-const pad = (n) =>{
-    // represents numbers under 10 with an aditional 0
-    // ex: 05
-    return n < 10 ? '0'+n : n;
-}
+
+// Used this func before knowing padStart func
+//
+// const pad = (n) =>{
+//     // represents numbers under 10 with an aditional 0
+//     // ex: 05
+//     return n < 10 ? '0'+n : n;
+// }
 
 const showHideBtns = () =>{
     if(!intervalOn){
@@ -68,10 +71,10 @@ const updateCron = () =>{
         hourBox.classList.remove('hidden');
     } else{hourBox.classList.add('hidden')}
 
-    mili.innerHTML = pad(mil);
-    seconds.innerHTML = pad(sec);
-    minutes.innerHTML = pad(min);
-    hours.innerHTML = pad(hour);
+    mili.innerHTML = String(mil).padStart(2, 0);
+    seconds.innerHTML = String(sec).padStart(2, 0);
+    minutes.innerHTML = String(min).padStart(2, 0);
+    hours.innerHTML = String(hour).padStart(2, 0);
 }
 
 const start = () =>{  
